@@ -9,18 +9,14 @@
 
 .btn {
    position: absolute;
-   // transition: transform 4s ease;
-   &__origin {
-      top: 50vh;
-      left: 50vw;
-      transform: translate(-50%, -50%);
-      transition: transform 4s ease;
-   }
-   &__nextPhase {
-      top: 50vh;
-      left: 50vw;
+   top: 50vh;
+   left: 50vw;
+   transform: translate(-50%, -50%);
+   width: 100px;
+   transition: transform 4s ease;
+
+   &.__nextPhase {
       transform: translate(50%, 50%);
-      transition: transform 4s ease;
    }
 
    &__origin:hover {
@@ -29,5 +25,4 @@
       transform: translate(50%, 50%);
       transition: transform 4s ease;
    }
-
 }
