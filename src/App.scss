@@ -5,20 +5,29 @@
 
 .main {
    position: relative;
-   // width: 1366px;
-   // height: 768px;
-   // border: 1px black solid;
 }
 
 .btn {
    position: absolute;
-   transform: translate(-50%, -50%);
+   // transition: transform 4s ease;
    &__origin {
       top: 50vh;
       left: 50vw;
+      transform: translate(-50%, -50%);
+      transition: transform 4s ease;
    }
    &__nextPhase {
-      top: 30vh;
-      left: 30vw;
+      top: 50vh;
+      left: 50vw;
+      transform: translate(50%, 50%);
+      transition: transform 4s ease;
    }
+
+   &__origin:hover {
+      top: 50vh;
+      left: 50vw;
+      transform: translate(50%, 50%);
+      transition: transform 4s ease;
+   }
+
 }
