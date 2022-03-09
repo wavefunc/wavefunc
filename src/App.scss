@@ -1,28 +1,36 @@
-#body,
-#root {
-   position: relative;
+html,
+body,
+svg {
+   width: 100%;
+   height: 100%;
+   margin: 0;
 }
 
-.main {
-   position: relative;
-}
+// #body,
+// #root {
+//    position: relative;
+// }
 
-.btn {
-   position: absolute;
-   top: 50vh;
-   left: 50vw;
-   transform: translate(-50%, -50%);
-   width: 100px;
-   transition: transform 4s ease;
+// .main {
+//    position: relative;
+// }
 
-   &.__nextPhase {
-      transform: translate(50%, 50%);
-   }
+// .btn {
+//    position: absolute;
+//    top: 50vh;
+//    left: 50vw;
+//    transform: translate(-50%, -50%);
+//    width: 100px;
+//    transition: transform 4s ease;
 
-   &__origin:hover {
-      top: 50vh;
-      left: 50vw;
-      transform: translate(50%, 50%);
-      transition: transform 4s ease;
-   }
-}
+//    &.__nextPhase {
+//       transform: translate(50%, 50%);
+//    }
+
+//    &__origin:hover {
+//       top: 50vh;
+//       left: 50vw;
+//       transform: translate(50%, 50%);
+//       transition: transform 4s ease;
+//    }
+// }
