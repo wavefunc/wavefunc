@@ -1,24 +1,11 @@
 import './App.scss';
 import { useState } from 'react';
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
 
 function App() {
-  const [state, setState] = useState('');
-  var myRef = React.createRef();
-
-  const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
-
-  const moveButton = () => {
-    myRef.current.classList.toggle('__nextPhase')
-    // setState('__nextPhase');
-    console.log(myRef.current.classList);
-  };
 
   return (
-    <svg viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 1920 980" fill="none" xmlns="http://www.w3.org/2000/svg">
 
       <g id="Hexagon 1" clip-path="url(#clip0_2_7)">
         <g id="Group">
@@ -33,15 +20,6 @@ function App() {
         </clipPath>
       </defs>
     </svg>
-    // <div className="main">
-    //   <Bounce>
-    //     <button
-    //       className="btn"
-    //       onClick={moveButton}
-    //       ref={myRef}
-    //     >button</button>
-    //   </Bounce>
-    // </div>
   );
 }
 
