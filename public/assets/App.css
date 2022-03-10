@@ -1,0 +1,25 @@
+html {
+   background: url("./backgroundEx.png") no-repeat center center fixed;
+   background-size: cover;
+}
+
+body {
+   position: relative;
+}
+
+.icon {
+   position: absolute;
+   transform: translate(-50%, -50%);
+}
+
+#icon1 {
+   width: 11vw;
+   top: 76vh;
+   left: 31vw;
+}
+
+#icon2 {
+   width: 3.7vw;
+   top: 50.3vh;
+   left: 10.5vw;
+}
