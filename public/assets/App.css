@@ -19,7 +19,43 @@ body {
 }
 
 #icon2 {
-   width: 3.7vw;
-   top: 50.3vh;
-   left: 10.5vw;
+   width: 3.6vw;
+   top: 50.4vh;
+   left: 10.6vw;
+}
+
+#icon3 {
+   width: 3.4vw;
+   top: 30.5vh;
+   left: 8.7vw;
+}
+
+#icon4 {
+   width: 3vw;
+   top: 23.3vh;
+   left: 24.5vw;
+}
+
+#icon5 {
+   width: 3.4vw;
+   top: 29.3vh;
+   left: 48vw;
+}
+
+#icon6 {
+   width: 3.3vw;
+   top: 47.1vh;
+   left: 67.6vw;
+}
+
+#icon7 {
+   width: 3.8vw;
+   top: 67.4vh;
+   left: 72.6vw;
+}
+
+#icon8 {
+   width: 4vw;
+   top: 78.5vh;
+   left: 58.3vw;
 }
