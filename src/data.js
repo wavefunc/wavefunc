@@ -39,8 +39,7 @@ export const dataTransParams = [
       'top': '76vh',
       'left': '31vw',
       'clockWiseTop': '66vh',
-      'clockWiseLeft': '17.5vw',
-      'type':'primary'
+      'clockWiseLeft': '17.5vw'
    },
    {
       'width': '3.6vw',

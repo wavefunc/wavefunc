@@ -15,7 +15,7 @@ body {
 .summary {
    position: absolute;
    background-color: rgb(25, 170, 209, 0.6);
-   display: none;
+   opacity: 0;
    color: #fff;
    width: 45vw;
    top: 32vh;

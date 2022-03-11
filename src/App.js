@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { dataIconParams as iconParams, dataTransParams as transParams } from './data';
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
@@ -10,21 +10,23 @@ gsap.registerPlugin(Draggable, MotionPathPlugin);
 
 
 function App() {
+  // 用於判斷目前轉到哪一個 icon
+  const [currentIcon, setCurrentIcon] = useState(iconParams[0].id);
+
   // 用來判斷轉動的前一個角度或下一個角度
   var nextAngle = 0;
   var previousAngle = 0;
 
   const moveIcon = (direction = 'clockwise') => {
+    // 將 transParams 的最前一個移到最後面，會讓 icon 順時針轉，反之則逆時針轉
     if (direction == 'clockwise')
-      // 將 transParams 的最前一個移到最後面，會讓 icon 順時針轉
       transParams.push(transParams.shift());
     else
-      // 將 transParams 的最後一個移到最前面，會讓 icon 逆時針轉
       transParams.unshift(transParams.pop());
 
     // 處理 icon 的旋轉動畫
     iconParams.forEach((val, idx) => {
-      gsap.to(`#${val.id}`, { duration: 0.2, width: transParams[idx].width })
+      gsap.to(`#${val.id}`, { duration: 0.2, width: transParams[idx].width });
       gsap.to(`#${val.id}`, {
         motionPath: {
           path: [{ top: transParams[idx].top, left: transParams[idx].left }]
@@ -36,6 +38,9 @@ function App() {
   };
 
   useEffect(() => {
+    // 設定初始的 summary
+    console.log(`#summary-${currentIcon}`);
+    // gsap.to(`#summary-${currentIcon}`, { opacity: 1 });
 
     // 設定 icon 的初始位置與大小
     iconParams.forEach((val, idx) => {
@@ -52,10 +57,14 @@ function App() {
           moveIcon('clockwise');
           nextAngle = Math.ceil(this.rotation / 90) * 90;
           previousAngle = Math.floor(this.rotation / 90) * 90;
+          // gsap.to(`#${currentIcon}`, { display: 'none' });
+
         } else if (this.rotation < previousAngle) {
           moveIcon('counterClockwise');
           nextAngle = Math.ceil(this.rotation / 90) * 90;
           previousAngle = Math.floor(this.rotation / 90) * 90;
+          gsap.to(`#summary-icon8`, { opacity: 1 });
+
         }
       }
     });
@@ -65,15 +74,15 @@ function App() {
   return (
     <React.Fragment>
       {
-        iconParams.map(val => (
-          <React.Fragment>
-            <Icon key={val.id} {...val} />
-            <Summary key={val.id} {...val} />
+        iconParams.map((val, idx) => (
+          <React.Fragment key={idx}>
+            <Icon key={`icon-${val.id}`} {...val} />
+            <Summary key={`summary-${val.id}`} {...val} />
           </React.Fragment>
         ))
       }
       <img id="gear" src="/assets/gear.svg" />
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
