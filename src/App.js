@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { dataIconParams, dataTransParams } from './data';
+import { dataIconParams as iconParams, dataTransParams as transParams } from './data';
 import Icon from './Icon';
 import { gsap } from 'gsap/all';
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -7,45 +7,38 @@ gsap.registerPlugin(MotionPathPlugin);
 
 
 function App() {
-  const [transParams, setTransParams] = useState(dataTransParams);
 
-  useEffect(() => {
-    gsap.to('#icon1', {
-      motionPath: {
-        path: [
-          { top: '76vh', left: '31vw' },
-          { top: '66vh', left: '20.8vh' },
-          { top: '50.4vh', left: '10.6vw' }
-        ],
-      },
-      ease: "back",
-      duration: 1,
+  const moveIcon = () => {
+    // 將 transParams 的最前一個移到最後面，會讓 icon 順時針轉
+    transParams.push(transParams.shift());
+
+    // // 將 transParams 的最後一個移到最前面，會讓 icon 逆時針轉
+    // transParams.unshift(transParams.pop());
+
+    // 處理 icon 的旋轉動畫
+    iconParams.forEach((val, idx) => {
+      gsap.to(`#${val.id}`, {
+        motionPath: {
+          path: [
+            // {top:, left:} // clockWise
+            { top: transParams[idx].top, left: transParams[idx].left }
+          ],
+        },
+        ease: "back",
+        duration: 1,
+      });
+      gsap.to(`#${val.id}`, { duration: 0.2, width: transParams[idx].width });
     });
-    gsap.to('#icon1', { duration: 0.2, width: '3.6vw' });
-
-    gsap.to('#icon2', {
-      motionPath: {
-        path: [
-          { top: '50.4vh', left: '10.6vw' },
-          { top: '35.475vh', left: '7.5vh' },
-          { top: '30.5vh', left: '8.7vw' }
-        ],
-      },
-      ease: "back",
-      duration: 1,
-    });
-    gsap.to('#icon2', { duration: 1, width: '3.4vw' });
-  });
-
+  };
 
   return (
     <React.Fragment>
       {
-        dataIconParams.map((val, idx) => {
-          return <Icon {...val} {...transParams[idx]} />
+        iconParams.map((val, idx) => {
+          return <Icon key={val.id} {...val} {...transParams[idx]} />
         })
       }
-      <h1>{transParams[0].width}</h1>
+      <button onClick={() => moveIcon()}>按鈕</button>
     </React.Fragment>
   );
 }
