@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Icon({ id = 0, src = ''}) {
+function Icon({ id = 0, src = '' }) {
    return (
       <React.Fragment>
-         <img id={id} className='icon' src={src} />
+         <img id={id} className='icon' src={src} alt={id} />
       </React.Fragment>
    );
 }

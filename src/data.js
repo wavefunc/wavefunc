@@ -1,35 +1,44 @@
 export const dataIconParams = [
    {
       'id': 'icon1',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary1'
+
    },
    {
       'id': 'icon2',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary2'
    },
    {
       'id': 'icon3',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary3'
    },
    {
       'id': 'icon4',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary4'
    },
    {
       'id': 'icon5',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary5'
    },
    {
       'id': 'icon6',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary6'
    },
    {
       'id': 'icon7',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary7'
    },
    {
       'id': 'icon8',
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary8'
    },
 ]
 

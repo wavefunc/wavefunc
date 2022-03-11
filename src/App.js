@@ -11,7 +11,7 @@ gsap.registerPlugin(Draggable, MotionPathPlugin);
 
 function App() {
   // 用於判斷目前轉到哪一個 icon
-  const [currentIcon, setCurrentIcon] = useState(iconParams[0].id);
+  // const [currentIcon, setCurrentIcon] = useState(iconParams[0].summaryId);
 
   // 用來判斷轉動的前一個角度或下一個角度
   var nextAngle = 0;
@@ -39,8 +39,7 @@ function App() {
 
   useEffect(() => {
     // 設定初始的 summary
-    console.log(`#summary-${currentIcon}`);
-    // gsap.to(`#summary-${currentIcon}`, { opacity: 1 });
+    gsap.to(`#${iconParams[0].summaryId}`, { opacity: 1 });
 
     // 設定 icon 的初始位置與大小
     iconParams.forEach((val, idx) => {
@@ -57,13 +56,18 @@ function App() {
           moveIcon('clockwise');
           nextAngle = Math.ceil(this.rotation / 90) * 90;
           previousAngle = Math.floor(this.rotation / 90) * 90;
-          // gsap.to(`#${currentIcon}`, { display: 'none' });
+          gsap.to(`#${iconParams[Math.ceil(Math.floor(this.rotation / 90) % 8)].summaryId}`, { opacity: 0 });
+          gsap.to(`#${iconParams[Math.ceil(Math.ceil(this.rotation / 90) % 8)].summaryId}`, { opacity: 1 });
+          console.log(Math.ceil(Math.ceil(this.rotation / 90) % 8));
+          console.log(Math.ceil(Math.floor(this.rotation / 90) % 8));
+          console.log('....');
+          // console.log(Math.ceil(Math.ceil(this.rotation / 90) / 8));
 
         } else if (this.rotation < previousAngle) {
           moveIcon('counterClockwise');
           nextAngle = Math.ceil(this.rotation / 90) * 90;
           previousAngle = Math.floor(this.rotation / 90) * 90;
-          gsap.to(`#summary-icon8`, { opacity: 1 });
+          // gsap.to(`#summary-icon8`, { opacity: 1 });
 
         }
       }
@@ -76,8 +80,8 @@ function App() {
       {
         iconParams.map((val, idx) => (
           <React.Fragment key={idx}>
-            <Icon key={`icon-${val.id}`} {...val} />
-            <Summary key={`summary-${val.id}`} {...val} />
+            <Icon key={val.id} {...val} />
+            <Summary key={val.summaryId} {...val} />
           </React.Fragment>
         ))
       }
