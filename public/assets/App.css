@@ -12,50 +12,19 @@ body {
    transform: translate(-50%, -50%);
 }
 
-#icon1 {
-   width: 11vw;
-   top: 76vh;
-   left: 31vw;
+.summary {
+   position: absolute;
+   background-color: rgb(25, 170, 209, 0.6);
+   display: none;
+   color: #fff;
+   width: 45vw;
+   top: 32vh;
+   left: 39vw;
 }
 
-#icon2 {
-   width: 3.6vw;
-   top: 50.4vh;
-   left: 10.6vw;
-}
-
-#icon3 {
-   width: 3.4vw;
-   top: 30.5vh;
-   left: 8.7vw;
-}
-
-#icon4 {
-   width: 3vw;
-   top: 23.3vh;
-   left: 24.5vw;
-}
-
-#icon5 {
-   width: 3.4vw;
-   top: 29.3vh;
-   left: 48vw;
-}
-
-#icon6 {
-   width: 3.3vw;
-   top: 47.1vh;
-   left: 67.6vw;
-}
-
-#icon7 {
-   width: 3.8vw;
-   top: 67.4vh;
-   left: 72.6vw;
-}
-
-#icon8 {
-   width: 4vw;
-   top: 78.5vh;
-   left: 58.3vw;
+#gear {
+   position: absolute;
+   width: 15vw;
+   top: 61.8vh;
+   left: 23.1vw;
 }
