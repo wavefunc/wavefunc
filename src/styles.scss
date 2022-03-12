@@ -1,5 +1,5 @@
 html {
-   background: url("../public/assets/backgroundEx.png") no-repeat center center fixed;
+   background: url("../public/assets/backgroundSquare.jpg") no-repeat center center fixed;
    background-size: cover;
 }
 
@@ -14,11 +14,10 @@ body {
 }
 
 .roundBLock {
-   height: 25px;
-   width: 25px;
    background-color: #fff;
    border-radius: 50%;
-   filter: blur(8px);
+   filter: blur(4px);
+   z-index: -1;
 }
 
 .summary {

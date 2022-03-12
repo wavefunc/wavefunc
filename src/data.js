@@ -79,5 +79,39 @@ export const dataTransform = [
       'top': '78.5vh',
       'left': '58.3vw'
    },
+]
 
+export const dataRndBlock = [
+   {
+      'width': '0px',
+      'height': '0px'
+   },
+   {
+      'width': '3.7vw',
+      'height': '3.7vw'
+   },
+   {
+      'width': '3.5vw',
+      'height': '3.5vw'
+   },
+   {
+      'width': '3.2vw',
+      'height': '3.2vw'
+   },
+   {
+      'width': '3.6vw',
+      'height': '3.6vw'
+   },
+   {
+      'width': '3.3vw',
+      'height': '3.3vw'
+   },
+   {
+      'width': '4.2vw',
+      'height': '4.2vw'
+   },
+   {
+      'width': '4.6vw',
+      'height': '4.6vw'
+   },
 ]
