@@ -29,9 +29,14 @@ function Gear({
    });
 
    return (
-      <div id="divGear">
-         <img id="gear" src="/assets/gear.svg" />
-      </div>
+      <React.Fragment>
+         <div id="divLens">
+            <img id='lens' src='/assets/lens.svg' />
+         </div>
+         <div id="divGear">
+            <img id="gear" src="/assets/gear.svg" />
+         </div>
+      </React.Fragment>
    );
 }
 
