@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import './styles.scss'
+import React, { useEffect } from 'react';
 import { dataIconParams as iconParams, dataTransParams as transParams } from './data';
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
@@ -10,19 +11,15 @@ gsap.registerPlugin(Draggable, MotionPathPlugin);
 
 
 function App() {
-  // 用於判斷目前轉到哪一個 icon
-  // const [currentIcon, setCurrentIcon] = useState(iconParams[0].summaryId);
-
   // 用來判斷轉動的前一個角度或下一個角度
   var nextAngle = 0;
   var previousAngle = 0;
 
   const moveIcon = (direction = 'clockwise') => {
     // 將 transParams 的最前一個移到最後面，會讓 icon 順時針轉，反之則逆時針轉
-    if (direction == 'clockwise')
-      transParams.push(transParams.shift());
-    else
-      transParams.unshift(transParams.pop());
+    (direction == 'clockwise') ?
+      transParams.push(transParams.shift()) :
+      transParams.unshift(transParams.pop())
 
     // 處理 icon 的旋轉動畫
     iconParams.forEach((val, idx) => {
@@ -52,25 +49,32 @@ function App() {
     Draggable.create("#gear", {
       type: "rotation",
       onDrag: function () {
+        var snap = this.rotation / 90;
         if (this.rotation > nextAngle) {
-          moveIcon('clockwise');
-          nextAngle = Math.ceil(this.rotation / 90) * 90;
-          previousAngle = Math.floor(this.rotation / 90) * 90;
-          gsap.to(`#${iconParams[Math.ceil(Math.floor(this.rotation / 90) % 8)].summaryId}`, { opacity: 0 });
-          gsap.to(`#${iconParams[Math.ceil(Math.ceil(this.rotation / 90) % 8)].summaryId}`, { opacity: 1 });
-          console.log(Math.ceil(Math.ceil(this.rotation / 90) % 8));
-          console.log(Math.ceil(Math.floor(this.rotation / 90) % 8));
-          console.log('....');
-          // console.log(Math.ceil(Math.ceil(this.rotation / 90) / 8));
-
-        } else if (this.rotation < previousAngle) {
           moveIcon('counterClockwise');
-          nextAngle = Math.ceil(this.rotation / 90) * 90;
-          previousAngle = Math.floor(this.rotation / 90) * 90;
-          // gsap.to(`#summary-icon8`, { opacity: 1 });
-
+          nextAngle = Math.ceil(snap) * 90; // 計算下一個 snap 角度
+          previousAngle = Math.floor(snap) * 90; // 計算上一個 snap 角度
+        } else if (this.rotation < previousAngle) {
+          moveIcon('clockwise');
+          nextAngle = Math.ceil(snap) * 90; // 計算下一個 snap 角度
+          previousAngle = Math.floor(snap) * 90; // 計算上一個 snap 角度
         }
+      },
+      onDragStart: function () {
+        // 開始轉動時，將所有 summary 淡出
+        iconParams.forEach((val, idx) => {
+          gsap.to(`#${iconParams[idx].summaryId}`, { opacity: 0 });
+        });
+      },
+      onDragEnd: function () {
+        // 轉動結束時，將 hitTest 到的 summary 淡入
+        iconParams.forEach((val, idx) => {
+          if (this.hitTest(`#${val.id}`)) {
+            gsap.to(`#${iconParams[idx].summaryId}`, { opacity: 1 });
+          };
+        });
       }
+      
     });
 
   }, []);
@@ -85,7 +89,9 @@ function App() {
           </React.Fragment>
         ))
       }
-      <img id="gear" src="/assets/gear.svg" />
+      <div id="divGear">
+        <img id="gear" src="/assets/gear.svg" />
+      </div>
     </React.Fragment >
   );
 }

@@ -1,9 +1,14 @@
 export const dataIconParams = [
    {
+      'id': 'icon0',
+      'src': '/assets/icon/donut.svg',
+      'summaryId': 'summary0'
+
+   },
+   {
       'id': 'icon1',
       'src': '/assets/icon/donut.svg',
       'summaryId': 'summary1'
-
    },
    {
       'id': 'icon2',
@@ -35,16 +40,12 @@ export const dataIconParams = [
       'src': '/assets/icon/donut.svg',
       'summaryId': 'summary7'
    },
-   {
-      'id': 'icon8',
-      'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary8'
-   },
 ]
 
 export const dataTransParams = [
    {
-      'width': '11vw',
+      // 'width': '11vw',
+      'width': '130px',
       'top': '76vh',
       'left': '31vw',
       'clockWiseTop': '66vh',

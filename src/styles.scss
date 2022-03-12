@@ -1,5 +1,5 @@
 html {
-   background: url("./backgroundEx.png") no-repeat center center fixed;
+   background: url("../public/assets/backgroundEx.png") no-repeat center center fixed;
    background-size: cover;
 }
 
@@ -10,20 +10,20 @@ body {
 .icon {
    position: absolute;
    transform: translate(-50%, -50%);
-   /* animation: float 6s ease-in-out infinite; */
+   // animation: float 6s ease-in-out infinite;
 }
 
-/* @keyframes float {
-   0% {
-      transform: translate(-50%, -50%);
-   }
-   50% {
-      transform: translate(-40%, -40%);
-   }
-   100% {
-      transform: translate(-50%, -50%);
-   }
-} */
+// @keyframes float {
+//    0% {
+//       transform: translate(-50%, -50%);
+//    }
+//    50% {
+//       transform: translate(-40%, -40%);
+//    }
+//    100% {
+//       transform: translate(-50%, -50%);
+//    }
+// }
 
 .summary {
    position: absolute;
