@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-function Icon({ id = 0, src = '' }) {
+function Icon({ id = '', src = '' }) {
 
    useEffect(() => {
       // 設定 icon 隨機 float animation

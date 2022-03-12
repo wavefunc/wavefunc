@@ -1,44 +1,35 @@
 export const dataElement = [
    {
-      'id': 'icon0',
+      'id': 'id0',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary0'
-
    },
    {
-      'id': 'icon1',
+      'id': 'id1',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary1'
    },
    {
-      'id': 'icon2',
+      'id': 'id2',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary2'
    },
    {
-      'id': 'icon3',
+      'id': 'id3',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary3'
    },
    {
-      'id': 'icon4',
+      'id': 'id4',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary4'
    },
    {
-      'id': 'icon5',
+      'id': 'id5',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary5'
    },
    {
-      'id': 'icon6',
+      'id': 'id6',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary6'
    },
    {
-      'id': 'icon7',
+      'id': 'id7',
       'src': '/assets/icon/donut.svg',
-      'summaryId': 'summary7'
    },
 ]
 
@@ -48,8 +39,8 @@ export const dataTransform = [
       'width': '130px',
       'top': '76vh',
       'left': '31vw',
-      'clockWiseTop': '66vh',
-      'clockWiseLeft': '17.5vw'
+      'clockWiseTop': '66vh', // 轉動到下一個的中繼點
+      'clockWiseLeft': '17.5vw' // 轉動到下一個的中繼點
    },
    {
       'width': '3.6vw',

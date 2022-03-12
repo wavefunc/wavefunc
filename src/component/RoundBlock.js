@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function RoundBLock({ id = '' }) {
    return (
-      <div id={`roundBLock-${id}`} className='roundBLock'></div>
+      <div id={id} className='roundBLock'></div>
    );
 }
 
