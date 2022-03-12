@@ -31,6 +31,10 @@ body {
    left: 39vw;
 }
 
+.summary:first-of-type {
+   opacity: 1;
+}
+
 #divGear {
    position: absolute;
    transform: translate(-50%, -50%);
