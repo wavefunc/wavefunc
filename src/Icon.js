@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
-function Icon({ id = 0, src = '', randomX = 50, randomY = 50 }) {
+function Icon({ id = 0, src = '' }) {
 
    useEffect(() => {
-      // 設定 icon 隨機 float
+      // 設定 icon 隨機 float animation
       var style = document.createElement('style');
       var rnmNumberX = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var rnmNumberY = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Summary({ summaryId = 0, src = '' }) {
+function Summary({ summaryId = 0 }) {
    return (
       <div id={summaryId} className='summary'>
          <h1>{summaryId}</h1>

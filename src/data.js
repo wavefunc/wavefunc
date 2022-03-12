@@ -1,4 +1,4 @@
-export const dataIconParams = [
+export const dataElement = [
    {
       'id': 'icon0',
       'src': '/assets/icon/donut.svg',
@@ -42,7 +42,7 @@ export const dataIconParams = [
    },
 ]
 
-export const dataTransParams = [
+export const dataTransform = [
    {
       // 'width': '11vw',
       'width': '130px',
