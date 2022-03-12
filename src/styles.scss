@@ -10,20 +10,7 @@ body {
 .icon {
    position: absolute;
    transform: translate(-50%, -50%);
-   // animation: float 6s ease-in-out infinite;
 }
-
-// @keyframes float {
-//    0% {
-//       transform: translate(-50%, -50%);
-//    }
-//    50% {
-//       transform: translate(-40%, -40%);
-//    }
-//    100% {
-//       transform: translate(-50%, -50%);
-//    }
-// }
 
 .summary {
    position: absolute;

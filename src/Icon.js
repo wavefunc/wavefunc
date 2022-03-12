@@ -3,15 +3,20 @@ import React, { useEffect } from 'react';
 function Icon({ id = 0, src = '', randomX = 50, randomY = 50 }) {
 
    useEffect(() => {
+      // 設定 icon 隨機 float
       var style = document.createElement('style');
-      var rnmNumber = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
+      var rnmNumberX = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
+      var rnmNumberY = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var keyFrames = `
          @keyframes float-${id} {
             0% {
                transform: translate(-50%, -50%);
             }
-            50% {
-               transform: translate(${rnmNumber}%, ${rnmNumber}%);
+            35% {
+               transform: translate(${rnmNumberX}%, ${rnmNumberY}%);
+            }
+            65% {
+               transform: translate(${rnmNumberY}%, ${rnmNumberX}%);
             }
             100% {
                transform: translate(-50%, -50%);
