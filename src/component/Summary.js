@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Badge, Row } from 'react-bootstrap';
+import FontAwesomeIcon from '@fortawesome/free-solid-svg-icons'
 
 function Summary() {
    return (
@@ -25,9 +26,9 @@ function Summary() {
                </Row>
                <Row>
                   <div>
-                     國立中正大學 資訊管理研究所 畢業
+                     國立中正大學 資訊管理研究所 畢業<br />
                      福智佛教基金會中區事業部 資料庫管理人員 5年半<br />
-                     目前於 資策會前端工程師班 學習<br />
+                     目前於 資策會前端工程師班 學習
                   </div>
                </Row>
             </Container>
@@ -35,11 +36,19 @@ function Summary() {
          <div id="smry-id2" className='summary' >
             <Container className="p-3" fluid>
                <Row>
-                  <h4>smry-id02</h4>
+                  <h4>Front-End</h4>
                </Row>
                <Row>
                   <div>
-                     擅於架構性思惟、對前端懷抱熱情<br />
+                     <Badge>HTML</Badge> &nbsp;
+                     <FontAwesomeIcon icon="fa-brands fa-html5" />
+                     <Badge>CSS</Badge>&nbsp;
+                     <Badge>Bootstrap</Badge>
+                     <br />
+                     <Badge>JavaScript</Badge>&nbsp;
+                     <Badge>jQuery</Badge>&nbsp;
+                     <Badge>React</Badge>
+                     <br />
                   </div>
                </Row>
             </Container>
