@@ -19,7 +19,7 @@ function Gear({
          },
          onDragStart: function () {
             // 開始轉動時，將所有 summary 淡出
-            gsap.to('.summary', { opacity: 0 });
+            gsap.to('.summary', { display: 'none', opacity: 0 });
          },
          onDragEnd: function () {
             displaySummary(this, dataElement);

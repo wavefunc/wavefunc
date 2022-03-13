@@ -38,10 +38,10 @@ function App() {
           <React.Fragment key={idx}>
             <RoundBLock key={`rndBlock-${val.id}`} {...val} id={`rndBlock-${val.id}`} />
             <Icon key={`icon-${val.id}`} {...val} id={`icon-${val.id}`} />
-            <Summary key={`smry-${val.id}`} {...val} id={`smry-${val.id}`} />
           </React.Fragment>
         ))
       }
+      <Summary />
       <Gear
         dataElement={dataElement}
         dataTransform={dataTransform}
