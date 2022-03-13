@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
+import imgLens from '../assets/lens.svg';
+import imgGear from '../assets/gear.svg';
 gsap.registerPlugin(Draggable);
 
 function Gear({
@@ -31,10 +33,10 @@ function Gear({
    return (
       <React.Fragment>
          <div id="divLens">
-            <img id='lens' src='/assets/lens.svg' />
+            <img id='lens' src={imgLens} />
          </div>
          <div id="divGear">
-            <img id="gear" src="/assets/gear.svg" />
+            <img id="gear" src={imgGear} />+
          </div>
       </React.Fragment>
    );

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-function Icon({ id = '', src = '' }) {
+function Icon({ id = ''}) {
 
    useEffect(() => {
       // 設定 icon 隨機 float animation
@@ -32,7 +32,6 @@ function Icon({ id = '', src = '' }) {
          <img
             id={id}
             className='icon'
-            src={src}
             style={{ animation: `float-${id} 6s ease-in-out infinite` }}
          />
       </React.Fragment>

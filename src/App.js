@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
 
-    // 設定 icon 與 roundBlock 的初始位置與大小
+    // 設定 icon 與 roundBlock 的圖片、初始位置與大小
     dataElement.forEach((val, idx) => {
       gsap.set(`#icon-${val.id}`, {
         width: dataTransform[idx].width,
