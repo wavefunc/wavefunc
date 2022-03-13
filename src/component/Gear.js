@@ -34,7 +34,7 @@ function Gear({
             <img id='lens' src={`${process.env.PUBLIC_URL}/assets/lens.svg`} />
          </div>
          <div id="divGear">
-            <img id="gear" src={`${process.env.PUBLIC_URL}/assets/gear.svg`} />+
+            <img id="gear" src={`${process.env.PUBLIC_URL}/assets/gear.svg`} />
          </div>
       </React.Fragment>
    );
