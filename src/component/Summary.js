@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Badge, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5 } from '@fortawesome/free-solid-svg-icons'
+import { faHtml5, faCss3Alt, faJsSquare, faBootstrap, faReact } from '@fortawesome/free-brands-svg-icons'
 
 
 function Summary() {
@@ -42,14 +42,14 @@ function Summary() {
                </Row>
                <Row>
                   <div>
-                     <Badge><FontAwesomeIcon icon={["fab", "html5"]} />HTML</Badge> &nbsp;
+                     <Badge backgroundColor="#fd7e14"><FontAwesomeIcon icon={faHtml5} />&nbsp;HTML</Badge> &nbsp;
 
-                     <Badge>CSS</Badge>&nbsp;
-                     <Badge>Bootstrap</Badge>
+                     <Badge><FontAwesomeIcon icon={faCss3Alt} />&nbsp;CSS</Badge>&nbsp;
+                     <Badge><FontAwesomeIcon icon={faBootstrap} />&nbsp;Bootstrap</Badge>
                      <br />
-                     <Badge>JavaScript</Badge>&nbsp;
-                     <Badge>jQuery</Badge>&nbsp;
-                     <Badge>React</Badge>
+                     <Badge bg="warning"><FontAwesomeIcon icon={faJsSquare} />&nbsp;JavaScript</Badge>&nbsp;
+                     <Badge>&nbsp;jQuery</Badge>&nbsp;
+                     <Badge><FontAwesomeIcon icon={faReact} />&nbsp;React</Badge>
                      <br />
                   </div>
                </Row>
