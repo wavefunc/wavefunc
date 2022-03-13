@@ -1,5 +1,5 @@
 html {
-   background: url("../public/assets/backgroundSquare.jpg") no-repeat center center fixed;
+   background: url("../public/assets/background/bg-shapelined.jpg") no-repeat center center fixed;
    background-size: cover;
 }
 
@@ -23,15 +23,16 @@ body {
 .summary {
    position: absolute;
    background-color: rgb(25, 170, 209, 0.6);
-   opacity: 0;
+   opacity: 1;
    color: #fff;
    width: 45vw;
    top: 32vh;
    left: 39vw;
+   z-index: 20;
 }
 
-.summary:first-of-type {
-   opacity: 1;
+.summary ~ .summary {
+   opacity: 0;
 }
 
 #divGear {
