@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Badge, Row } from 'react-bootstrap';
-import FontAwesomeIcon from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHtml5 } from '@fortawesome/free-solid-svg-icons'
+
 
 function Summary() {
    return (
@@ -40,8 +42,8 @@ function Summary() {
                </Row>
                <Row>
                   <div>
-                     <Badge>HTML</Badge> &nbsp;
-                     <FontAwesomeIcon icon="fa-brands fa-html5" />
+                     <Badge><FontAwesomeIcon icon={["fab", "html5"]} />HTML</Badge> &nbsp;
+
                      <Badge>CSS</Badge>&nbsp;
                      <Badge>Bootstrap</Badge>
                      <br />
