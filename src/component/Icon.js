@@ -32,7 +32,7 @@ function Icon({ id = '', src = '' }) {
          <img
             id={id}
             className='icon'
-            src={src}
+            src={process.env.PUBLIC_URL + src}
             style={{ animation: `float-${id} 6s ease-in-out infinite` }}
          />
       </React.Fragment>

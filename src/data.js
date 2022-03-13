@@ -1,35 +1,35 @@
 export const dataElement = [
    {
       'id': 'id0',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id1',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id2',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id3',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id4',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id5',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id6',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
    {
       'id': 'id7',
-      'src': './assets/icon/donut.svg'
+      'src': '/assets/icon/donut.svg'
    },
 ]
 
