@@ -7,7 +7,8 @@ function Gear({
    dataElement = {},
    dataTransform = {},
    rotateGear = f => f,
-   displaySummary = f => f
+   displaySummary = f => f,
+   icons = []
 }) {
 
    useEffect(() => {
@@ -22,7 +23,7 @@ function Gear({
             gsap.to('.summary', { display: 'none', opacity: 0 });
          },
          onDragEnd: function () {
-            displaySummary(this, dataElement);
+            displaySummary(this, dataElement, icons);
          }
       });
 

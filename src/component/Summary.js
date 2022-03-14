@@ -42,7 +42,7 @@ function Summary() {
                </Row>
                <Row>
                   <div>
-                     <Badge backgroundColor="#fd7e14"><FontAwesomeIcon icon={faHtml5} />&nbsp;HTML</Badge> &nbsp;
+                     <Badge background-color="#fd7e14"><FontAwesomeIcon icon={faHtml5} />&nbsp;HTML</Badge> &nbsp;
 
                      <Badge><FontAwesomeIcon icon={faCss3Alt} />&nbsp;CSS</Badge>&nbsp;
                      <Badge><FontAwesomeIcon icon={faBootstrap} />&nbsp;Bootstrap</Badge>

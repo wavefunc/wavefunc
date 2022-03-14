@@ -42,7 +42,7 @@ export function rotateGear(e = {}, dataElement = {}, dataTransform = {}) {
 };
 
 // 顯示 summary
-export function displaySummary(e = {}, dataElement = []) {
+export function displaySummary(e = {}, dataElement = [], icons = []) {
    // 設定 300 毫秒後執行，避免移動太快讓 hitTest 偵測到兩個 icon-id
    const timeout = setTimeout(() => {
 
@@ -50,8 +50,8 @@ export function displaySummary(e = {}, dataElement = []) {
       dataElement.forEach((val, idx) => {
          if (e.hitTest(`#icon-${val.id}`)) {
             gsap.to(`#smry-${dataElement[idx].id}`, { opacity: 1, display: 'block' });
-   };
-});
+         };
+      });
    }, 300);
 
 };

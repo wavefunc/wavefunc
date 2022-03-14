@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-function Icon({ id = '', src = '' }) {
+function Icon({ seq = 0, id = '', src = '' }) {
 
    useEffect(() => {
       // 設定 icon 隨機 float animation
@@ -8,7 +8,7 @@ function Icon({ id = '', src = '' }) {
       var rnmNumberX = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var rnmNumberY = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var keyFrames = `
-         @keyframes float-${id} {
+         @keyframes float-icon-${seq} {
             0% {
                transform: translate(-50%, -50%);
             }
@@ -33,7 +33,7 @@ function Icon({ id = '', src = '' }) {
             id={id}
             className='icon'
             src={process.env.PUBLIC_URL + src}
-            style={{ animation: `float-${id} 6s ease-in-out infinite` }}
+            style={{ animation: `float-icon-${seq} 6s ease-in-out infinite` }}
          />
       </React.Fragment>
    );
