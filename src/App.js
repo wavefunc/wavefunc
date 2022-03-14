@@ -47,10 +47,10 @@ function App() {
           <React.Fragment key={idx}>
             <RndBlock key={`rndBlock-${idx}`} seq={idx} {...val} />
             <Icon key={`icon-${idx}`} seq={idx} {...val} />
+            <Summary key={`smry-${idx}`} seq={idx} />
           </React.Fragment>
         ))
       }
-      <Summary />
       <Gear
         dataTransform={dataTransform}
         rotateGear={rotateGear}
