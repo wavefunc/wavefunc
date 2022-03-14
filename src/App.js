@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import gsap from "gsap";
 import './styles.scss'
+import { Container } from 'react-bootstrap';
 
 import { dataElement, dataTransform, dataRndBlock } from './data';
 import Icon from './component/Icon';
@@ -47,7 +48,11 @@ function App() {
           <React.Fragment key={idx}>
             <RndBlock key={`rndBlock-${idx}`} seq={idx} {...val} />
             <Icon key={`icon-${idx}`} seq={idx} {...val} />
-            <Summary key={`smry-${idx}`} seq={idx} />
+            <div className='summary' >
+              <Container className="p-3" fluid>
+                <Summary key={`smry-${idx}`} seq={idx} />
+              </Container>
+            </div>
           </React.Fragment>
         ))
       }

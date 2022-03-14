@@ -1,27 +1,27 @@
 export const dataElement = [
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/shirt.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/briefcase.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/ui.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/database.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/duck.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/bb.png'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/lotus.svg'
    },
    {
-      'src': '/assets/icon/donut.svg'
+      'src': '/assets/icon/compass.svg'
    },
 ]
 
