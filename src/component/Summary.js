@@ -7,7 +7,8 @@ import { faHtml5, faCss3Alt, faJsSquare, faBootstrap, faReact } from '@fortaweso
 function Summary() {
    return (
       <React.Fragment>
-         <div id="smry-id0" className='summary' >
+         {/* 0 簡介 */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>李冠樺 Edward</h4>
@@ -21,7 +22,8 @@ function Summary() {
                </Row>
             </Container>
          </div>
-         <div id="smry-id1" className='summary' >
+         {/* 1 經歷 */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>經歷</h4>
@@ -34,8 +36,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id2" className='summary' >
+         </div>         
+         {/* 2 Front-End */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>Front-End</h4>
@@ -54,8 +57,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id3" className='summary' >
+         </div>        
+         {/* 3 Back-End */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>smry-id02</h4>
@@ -66,8 +70,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id4" className='summary' >
+         </div>        
+         {/* 4 Other skill */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>smry-id02</h4>
@@ -78,8 +83,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id5" className='summary' >
+         </div>        
+         {/* 5 作品集 Duckside */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>smry-id02</h4>
@@ -90,8 +96,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id6" className='summary' >
+         </div>        
+         {/* 6 作品集 bb減塑大進擊 */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>smry-id02</h4>
@@ -102,8 +109,9 @@ function Summary() {
                   </div>
                </Row>
             </Container>
-         </div>
-         <div id="smry-id7" className='summary' >
+         </div>        
+         {/* 7 作品集 問候圖產生器 */}
+         <div className='summary' >
             <Container className="p-3" fluid>
                <Row>
                   <h4>smry-id02</h4>

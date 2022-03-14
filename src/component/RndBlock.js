@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-function RoundBLock({ id = '' }) {
+function RndBlock({ seq = 0 }) {
    useEffect(() => {
 
       // 設定 round block 隨機 float animation
@@ -8,7 +8,7 @@ function RoundBLock({ id = '' }) {
       var rnmNumberX = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var rnmNumberY = (Math.random() * 21 + 40) * -1 // -40 ~ -60 的隨機數字
       var keyFrames = `
-         @keyframes float-${id} {
+         @keyframes float-rndBlock-${seq} {
             0% {
                transform: translate(-50%, -50%);
             }
@@ -29,12 +29,11 @@ function RoundBLock({ id = '' }) {
 
    return (
       <div
-         id={id}
-         className='roundBLock'
-         style={{ animation: `float-${id} 6s ease-in-out infinite` }}
+         className='rndBlock'
+         style={{ animation: `float-rndBlock-${seq} 6s ease-in-out infinite` }}
       >
       </div>
    );
 }
 
-export default RoundBLock;
+export default RndBlock;

@@ -5,23 +5,25 @@ import './styles.scss'
 import { dataElement, dataTransform, dataRndBlock } from './data';
 import Icon from './component/Icon';
 import Summary from './component/Summary';
-import RoundBLock from './component/RoundBlock';
+import RndBlock from './component/RndBlock';
 import Gear from './component/Gear';
 import { rotateGear, displaySummary } from './handler/AnimationHandler';
 
 
 function App() {
   const [icons, setIcons] = useState([]);
+  const [summaries, setSummaries] = useState([]);
   const [rndBlocks, setRndBlocks] = useState([]);
 
   useEffect(() => {
     setIcons(gsap.utils.toArray('.icon'));
-    setRndBlocks(gsap.utils.toArray('.roundBLock'));
+    setSummaries(gsap.utils.toArray('.summary'));
+    setRndBlocks(gsap.utils.toArray('.rndBlock'));
   }, [])
 
   useEffect(() => {
 
-    // 設定 icon 與 roundBlock 的圖片、初始位置與大小
+    // 設定 icon 與 RndBlock 的圖片、初始位置與大小
     icons.forEach((val, idx) => {
       gsap.set(val, {
         width: dataTransform[idx].width,
@@ -43,18 +45,18 @@ function App() {
       {
         dataElement.map((val, idx) => (
           <React.Fragment key={idx}>
-            <RoundBLock key={`rndBlock-${val.id}`} {...val} id={`rndBlock-${val.id}`} />
-            <Icon key={`icon-${val.id}`} seq={idx} {...val} id={`icon-${val.id}`} />
+            <RndBlock key={`rndBlock-${val.id}`} seq={idx} {...val} />
+            <Icon key={`icon-${val.id}`} seq={idx} {...val} />
           </React.Fragment>
         ))
       }
       <Summary />
       <Gear
-        dataElement={dataElement}
         dataTransform={dataTransform}
         rotateGear={rotateGear}
         displaySummary={displaySummary}
         icons={icons}
+        summaries={summaries}
       />
     </React.Fragment >
   );

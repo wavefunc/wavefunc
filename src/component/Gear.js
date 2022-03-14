@@ -4,11 +4,11 @@ import Draggable from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
 function Gear({
-   dataElement = {},
    dataTransform = {},
    rotateGear = f => f,
    displaySummary = f => f,
-   icons = []
+   icons = [],
+   summaries = []
 }) {
 
    useEffect(() => {
@@ -16,14 +16,14 @@ function Gear({
       Draggable.create("#gear", {
          type: "rotation",
          onDrag: function () {
-            rotateGear(this, dataElement, dataTransform);
+            rotateGear(this, icons, dataTransform);
          },
          onDragStart: function () {
             // 開始轉動時，將所有 summary 淡出
             gsap.to('.summary', { display: 'none', opacity: 0 });
          },
          onDragEnd: function () {
-            displaySummary(this, dataElement, icons);
+            displaySummary(this, icons, summaries);
          }
       });
 
