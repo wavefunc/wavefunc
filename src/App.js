@@ -45,8 +45,8 @@ function App() {
       {
         dataElement.map((val, idx) => (
           <React.Fragment key={idx}>
-            <RndBlock key={`rndBlock-${val.id}`} seq={idx} {...val} />
-            <Icon key={`icon-${val.id}`} seq={idx} {...val} />
+            <RndBlock key={`rndBlock-${idx}`} seq={idx} {...val} />
+            <Icon key={`icon-${idx}`} seq={idx} {...val} />
           </React.Fragment>
         ))
       }
