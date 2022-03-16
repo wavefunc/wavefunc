@@ -8,6 +8,7 @@ import Icon from './component/Icon';
 import Summary from './component/Summary';
 import RndBlock from './component/RndBlock';
 import Gear from './component/Gear';
+import Detail from './component/Detail';
 import { rotateGear, displaySummary } from './handler/AnimationHandler';
 
 
@@ -15,11 +16,13 @@ function App() {
   const [icons, setIcons] = useState([]);
   const [summaries, setSummaries] = useState([]);
   const [rndBlocks, setRndBlocks] = useState([]);
+  const [details, setDetails] = useState([]);
 
   useEffect(() => {
     setIcons(gsap.utils.toArray('.icon'));
     setSummaries(gsap.utils.toArray('.summary'));
     setRndBlocks(gsap.utils.toArray('.rndBlock'));
+    setDetails(gsap.utils.toArray('.detail'));
   }, [])
 
   useEffect(() => {
@@ -38,7 +41,6 @@ function App() {
         left: dataTransform[idx].left
       });
     });
-
   }, [icons]);
 
   return (
@@ -46,11 +48,16 @@ function App() {
       {
         dataElement.map((val, idx) => (
           <React.Fragment key={idx}>
-            <RndBlock key={`rndBlock-${idx}`} seq={idx} {...val} />
+            <RndBlock key={`rndBlock-${idx}`} seq={idx} />
             <Icon key={`icon-${idx}`} seq={idx} {...val} />
-            <div className='summary' >
+            <div className='summary'>
               <Container className="p-3" fluid>
-                <Summary key={`smry-${idx}`} seq={idx} />
+                <Summary key={`smry-${idx}`} seq={idx} detail={details[idx]} />
+              </Container>
+            </div>
+            <div className='detail'>
+              <Container className="p-3" fluid>
+                <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} />
               </Container>
             </div>
           </React.Fragment>

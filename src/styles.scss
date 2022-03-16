@@ -40,6 +40,16 @@ body {
    opacity: 0;
 }
 
+.detail {
+   position: absolute;
+   background-color: #fff;
+   display: none;
+   opacity: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 40;
+}
+
 #divGear {
    position: absolute;
    transform: translate(-50%, -50%);
@@ -65,12 +75,12 @@ body {
 }
 
 // https://codepen.io/t_afif/pen/bGooZmq?editors=1100
-button {
+.smryBtn {
    --border: 3px; /* the border width */
    --slant: 0.7em; /* control the slanted corners */
    --color: #fff; /* the color */
 
-   font-size: 35px;
+   font-size: 23px;
    padding: 0.4em 1.2em;
    border: none;
    cursor: pointer;
@@ -91,17 +101,17 @@ button {
    );
    transition: color var(--t, 0.3s), background-size 0.3s;
 }
-button:hover,
-button:active {
+.smryBtn:hover,
+.smryBtn:active {
    background-size: 100% 100%;
    color: rgb(25, 170, 209, 1);
    --t: 0.2s 0.1s;
 }
-button:focus-visible {
+.smryBtn:focus-visible {
    outline-offset: calc(-1 * var(--border));
    outline: var(--border) solid #000a;
 }
-button:active {
+.smryBtn:active {
    --s: #0005;
    transition: none;
 }
