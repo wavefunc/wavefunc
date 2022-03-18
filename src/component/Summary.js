@@ -93,7 +93,7 @@ function Summary({ seq = 0, detail = {} }) {
                   {/* 5 作品集 Duckside */}
                   <h4>作品集 - Duckside 投資管理網站</h4>
                   <p>
-                     <a href="https://duckside0316.herokuapp.com/" target="_blank">連結</a>
+                     <a href="https://still-scrubland-65207.herokuapp.com/" target="_blank">連結</a>
                      <br />
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faNodeJs} />&nbsp;Node.js</Badge>
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faReact} />&nbsp;React</Badge>
