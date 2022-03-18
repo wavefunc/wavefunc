@@ -22,11 +22,11 @@ function Summary({ seq = 0, detail = {} }) {
                      耐心溝通、互助成長
                   </p>
                </Row>
-               {/* <Row>
+               <Row>
                   <Col>
                      <button className="smryBtn" onClick={btnHandler}>關於我</button>
                   </Col>
-               </Row> */}
+               </Row>
             </React.Fragment>
          );
       case 1:
@@ -36,7 +36,7 @@ function Summary({ seq = 0, detail = {} }) {
                <h4>經歷</h4>
                <p>
                   國立中正大學 資訊管理研究所 畢業<br />
-                  福智佛教基金會中區事業部 資料庫管理人員 5年半<br />
+                  福智佛教基金會中區事業部 資料庫維護人員 5年半<br />
                   目前於 資策會前端工程師養成班 學習
                </p>
             </React.Fragment>
@@ -101,11 +101,11 @@ function Summary({ seq = 0, detail = {} }) {
                      <Badge className='p-2 m-1' bg="secondary">&nbsp;RESTful API</Badge>
                   </p>
                </Row>
-               {/* <Row>
+               <Row>
                   <Col>
-                     <button>更多</button>
+                     <button className="smryBtn" onClick={btnHandler}>更多</button>
                   </Col>
-               </Row> */}
+               </Row>
             </React.Fragment>
          );
       case 5:
