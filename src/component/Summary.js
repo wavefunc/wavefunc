@@ -93,6 +93,8 @@ function Summary({ seq = 0, detail = {} }) {
                   {/* 5 作品集 Duckside */}
                   <h4>作品集 - Duckside 投資管理網站</h4>
                   <p>
+                     <a href="https://duckside0316.herokuapp.com/" target="_blank">連結</a>
+                     <br />
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faNodeJs} />&nbsp;Node.js</Badge>
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faReact} />&nbsp;React</Badge>
                      <Badge className='p-2 m-1' bg="secondary">&nbsp;MySQL</Badge>
@@ -113,7 +115,7 @@ function Summary({ seq = 0, detail = {} }) {
                   {/* 6 作品集 bb減塑大進擊 */}
                   <h4>作品集 - bb減塑大進擊</h4>
                   <p>
-                     <a href="https://wavefunc.github.io/bb-qa-game/" target="_blank">https://wavefunc.github.io/bb-qa-game/</a>
+                     <a href="https://wavefunc.github.io/bb-qa-game/" target="_blank">連結</a>
                      <br />
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faJsSquare} />&nbsp;JavaScript</Badge>
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faCss3Alt} />&nbsp;CSS</Badge>
@@ -127,7 +129,7 @@ function Summary({ seq = 0, detail = {} }) {
                {/* 7 作品集 問候圖產生器 */}
                <h4>作品集 - 問候圖產生器</h4>
                <p>
-                  <a href="https://wavefunc.github.io/greetPicMaker/" target="_blank">https://wavefunc.github.io/greetPicMaker/</a>
+                  <a href="https://wavefunc.github.io/greetPicMaker/" target="_blank">連結</a>
                   <br />
                   <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faJsSquare} />&nbsp;JavaScript</Badge>
                   <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faBootstrap} />&nbsp;Bootstrap</Badge>
