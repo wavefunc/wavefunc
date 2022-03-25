@@ -56,9 +56,7 @@ function App() {
               </Container>
             </div>
             <div className='detail'>
-              <Container className="p-3" fluid>
                 <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} />
-              </Container>
             </div>
           </React.Fragment>
         ))

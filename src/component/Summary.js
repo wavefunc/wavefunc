@@ -22,11 +22,11 @@ function Summary({ seq = 0, detail = {} }) {
                      耐心溝通、互助成長
                   </p>
                </Row>
-               {/* <Row>
+               <Row>
                   <Col>
                      <button className="smryBtn" onClick={btnHandler}>關於我</button>
                   </Col>
-               </Row> */}
+               </Row>
             </React.Fragment>
          );
       case 1:
