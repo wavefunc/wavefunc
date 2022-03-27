@@ -14,9 +14,9 @@ function Detail({ seq = 0, detail = {}, dataElement = "" }) {
             <img src={dataElement} />
             <CloseButton className="closeButton btn-lg" aria-label="Close" onClick={closeHandler} />
          </div>
-         <Container className="detailContent">
+         <div className="detailContent d-flex p-2 flex-wrap flex-md-nowrap">
             {contentSwitch(seq)}
-         </Container>
+         </div>
          <div className="detailFooter"></div>
       </React.Fragment>
    );
@@ -37,13 +37,13 @@ function contentSwitch(seq) {
    switch (seq) {
       case 0:
          return (
-            <Row>
-               <Col>
-                  <p>【我的個性】
-                     我是李冠樺，來自台中市，個性沉穩，善於思惟整理歸納要點，因此對於寫程式的架構與邏輯上的思考極有興趣。會觀察身邊的人有何需求，與伙伴之間的相處融洽。</p>
-               </Col>
-               <Col><Image className="m-3 align-self-start" width="300px" src="/assets/picture/edward.jpg" /></Col>
-            </Row>
+            <React.Fragment>
+               <div className='order-2 m-3'>
+                  <h2>我的個性</h2>
+                  <p>我是李冠樺，來自台中市，個性沉穩，善於思惟整理歸納要點，因此對於寫程式的架構與邏輯上的思考極有興趣。會觀察身邊的人有何需求，與伙伴之間的相處融洽。</p>
+               </div>
+               <Image className="order-1 m-3" width="300px" src="/assets/picture/edward.jpg" />
+            </React.Fragment>
          );
       case 4:
          return (
