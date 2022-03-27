@@ -2,18 +2,19 @@ import React from 'react';
 import gsap from 'gsap';
 import { Image, CloseButton, Container, Row, Col } from 'react-bootstrap'
 
-function Detail({ seq = 0, detail = {} }) {
+function Detail({ seq = 0, detail = {}, dataElement = "" }) {
    const closeHandler = () => {
       gsap.to(detail, { display: 'none', opacity: 0 });
    };
 
    return (
       <React.Fragment>
-         <Container>
-            <Row className="my-4">
-               <Col className="d-flex justify-content-center" xs={{ span: 6, offset: 3 }}><h1>{titleSwitch(seq)}</h1></Col>
-               <Col className="d-flex align-items-center" xs={{ span: 2, offset: 1 }} md={{ span: 1, offset: 2 }}><CloseButton className="btn-lg" aria-label="Close" onClick={closeHandler} /></Col>
-            </Row>
+         <div className="detailNav">
+            <h1>{titleSwitch(seq)}</h1>
+            <img src={dataElement} />
+            <CloseButton className="closeButton btn-lg" aria-label="Close" onClick={closeHandler} />
+         </div>
+         <Container className="detailContent">
             {contentSwitch(seq)}
          </Container>
       </React.Fragment>

@@ -56,7 +56,7 @@ function App() {
               </Container>
             </div>
             <div className='detail'>
-                <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} />
+              <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} dataElement={val.src} />
             </div>
           </React.Fragment>
         ))
