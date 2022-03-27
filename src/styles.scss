@@ -111,6 +111,15 @@ body {
    width: 100%;
 }
 
+#footer{
+   position: absolute;
+   background-color: #C0C1C3;
+   margin: 0px 5vw;
+   top: 92vh;
+   width: 90vw;
+   box-shadow: 5px 5px #D2D2D2 inset, -5px -5px #6D6D6D inset;
+}
+
 // https://codepen.io/t_afif/pen/bGooZmq?editors=1100
 .smryBtn {
    --border: 3px; /* the border width */

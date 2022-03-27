@@ -9,6 +9,7 @@ import Summary from './component/Summary';
 import RndBlock from './component/RndBlock';
 import Gear from './component/Gear';
 import Detail from './component/Detail';
+import Footer from './component/Footer';
 import { rotateGear, displaySummary } from './handler/AnimationHandler';
 
 
@@ -55,9 +56,7 @@ function App() {
                 <Summary key={`smry-${idx}`} seq={idx} detail={details[idx]} />
               </Container>
             </div>
-            <div className='detail'>
-              <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} dataElement={val.src} />
-            </div>
+            <Detail key={`detail-${idx}`} seq={idx} detail={details[idx]} dataElement={val.src} />
           </React.Fragment>
         ))
       }
@@ -68,6 +67,7 @@ function App() {
         icons={icons}
         summaries={summaries}
       />
+      <Footer />
     </React.Fragment >
   );
 }
