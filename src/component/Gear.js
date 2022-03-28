@@ -12,8 +12,11 @@ function Gear({
 }) {
 
    useEffect(() => {
+      // 設定 divHitTest，用於偵測碰觸到 divHitTest 的 icon
+      const divHitTest = Draggable.create('#divHitTest', { type: "rotation" });
+
       // 設定齒輪可轉動
-      Draggable.create("#gear", {
+      Draggable.create("#divGear", {
          type: "rotation",
          onDrag: function () {
             rotateGear(this, icons, dataTransform);
@@ -23,7 +26,7 @@ function Gear({
             gsap.to('.summary', { display: 'none', opacity: 0 });
          },
          onDragEnd: function () {
-            displaySummary(this, icons, summaries);
+            displaySummary(divHitTest[0], icons, summaries);
          }
       });
 
@@ -32,11 +35,12 @@ function Gear({
    return (
       <React.Fragment>
          <div id="divLens">
-            <img id='lens' src={`${process.env.PUBLIC_URL}/assets/lens.svg`} />
+            <img src={`${process.env.PUBLIC_URL}/assets/lens.svg`} />
          </div>
          <div id="divGear">
-            <img id="gear" src={`${process.env.PUBLIC_URL}/assets/gear.svg`} />
+            <img src={`${process.env.PUBLIC_URL}/assets/gear.svg`} />
          </div>
+         <div id="divHitTest"></div>
       </React.Fragment>
    );
 }

@@ -50,6 +50,7 @@ export function displaySummary(e = {}, icons = [], summaries = []) {
       icons.forEach((val, idx) => {
          if (e.hitTest(val)) {
             gsap.to(summaries[idx], { opacity: 1, display: 'block' });
+            console.log('hit');
          }
       });
    }, 300);

@@ -5,6 +5,7 @@
 html {
    background: url("../../public/assets/background/bg-shapelined.jpg") no-repeat center center fixed;
    background-size: cover;
+   overflow: hidden;
    body {
       position: relative;
    }
@@ -46,6 +47,14 @@ html {
    img {
       width: 100%;
    }
+}
+
+#divHitTest{
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   top: 75.8vh;
+   left: 30.5vw;
 }
 
 // Footer 首頁底下的使用技術、聯繫資訊

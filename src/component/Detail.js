@@ -39,7 +39,7 @@ function contentSwitch(seq) {
          return (
             <React.Fragment>
                <div className="d-flex px-2 flex-wrap flex-md-nowrap">
-                  <Image className="order-md-1 mt-3 mx-3 align-self-start" width="300px" src="/assets/picture/edward.jpg" />
+                  <Image className="order-md-1 mt-3 mx-3 align-self-start" width="300px" src={`${process.env.PUBLIC_URL}/assets/picture/edward.jpg`} />
                   <div className='order-md-0 mx-3 mt-5'>
                      <h3>我的個性</h3>
                      <p>我是李冠樺，來自台中市，個性沉穩，善於思惟整理歸納要點，因此對於寫程式的架構與邏輯上的思考極有興趣。會觀察身邊的人有何需求，與伙伴之間的相處融洽。</p>

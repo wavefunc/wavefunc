@@ -32,8 +32,11 @@
    }
 
    .detailContent {
-      max-width: 1000px;
+      max-width: 85vw;
+      max-height: 80vh;
       margin: 100px auto;
+      overflow: scroll;
+      overflow-x: hidden;
    }
 
    .detailFooter {
