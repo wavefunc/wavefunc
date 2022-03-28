@@ -72,7 +72,7 @@ function Summary({ seq = 0, detail = {} }) {
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faNodeJs} />&nbsp;Node.js</Badge>
                      <Badge className='p-2 m-1' bg="secondary"><FontAwesomeIcon icon={faPhp} />&nbsp;PHP</Badge>
                      <Badge className='p-2 m-1' bg="secondary">&nbsp;MySQL</Badge>
-                     <Badge className='p-2 m-1' bg="secondary">&nbsp;Microsoft SQL Server</Badge>
+                     <Badge className='p-2 m-1 text-wrap' bg="secondary">&nbsp;Microsoft SQL Server</Badge>
                   </Col>
                   <Col sm={6}>
                      {/* 4 Other skill */}

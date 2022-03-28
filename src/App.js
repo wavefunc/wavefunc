@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import gsap from "gsap";
-import './styles.scss'
+import './scss/index.scss';
+import './scss/summary.scss';
+import './scss/detail.scss';
 import { Container } from 'react-bootstrap';
 
 import { dataElement, dataTransform, dataRndBlock } from './data';
+import { rotateGear, displaySummary } from './handler/AnimationHandler';
 import Icon from './component/Icon';
 import Summary from './component/Summary';
 import RndBlock from './component/RndBlock';
 import Gear from './component/Gear';
 import Detail from './component/Detail';
 import Footer from './component/Footer';
-import { rotateGear, displaySummary } from './handler/AnimationHandler';
-
 
 function App() {
   const [icons, setIcons] = useState([]);

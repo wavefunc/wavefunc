@@ -1,0 +1,61 @@
+* {
+   font-family: "Microsoft YaHei", "Microsoft JhengHei", "LiGothic", "FangSong", Arial, serif;
+}
+
+html {
+   background: url("../../public/assets/background/bg-shapelined.jpg") no-repeat center center fixed;
+   background-size: cover;
+   body {
+      position: relative;
+   }
+}
+
+// 圖示 與 白圓點
+.icon,
+.rndBlock {
+   position: absolute;
+   transform: translate(-50%, -50%);
+}
+
+.rndBlock {
+   background-color: #fff;
+   border-radius: 50%;
+   filter: blur(4px);
+   z-index: -1;
+}
+
+// Gear 轉動的齒輪
+// https://www.shutterstock.com/zh/image-vector/knobs-made-distinct-characteristics-qualities-elements-1965293800https://www.shutterstock.com/zh/image-vector/knobs-made-distinct-characteristics-qualities-elements-1965293800
+#divGear {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   width: 200px;
+   top: 76.4vh;
+   left: 31vw;
+   img {
+      width: 100%;
+   }
+}
+
+#divLens {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   width: 216px;
+   top: 76.4vh;
+   left: 31vw;
+   img {
+      width: 100%;
+   }
+}
+
+// Footer 首頁底下的使用技術、聯繫資訊
+#footer {
+   position: absolute;
+   background-color: #c0c1c3;
+   margin: 0px 5vw;
+   top: 92vh;
+   width: 90vw;
+   height: 50px;
+   font-size: 2vw;
+   box-shadow: 5px 5px #d2d2d2 inset, -5px -5px #6d6d6d inset;
+}
