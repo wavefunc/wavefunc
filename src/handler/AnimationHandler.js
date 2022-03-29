@@ -9,7 +9,7 @@ var previousAngle = 0;
 // 轉動 icon
 export function moveIcon(direction = 'clockwise', icons = [], dataTransform = []) {
    // 將 dataTransform 的最前一個移到最後面，會讓 icon 順時針轉，反之則逆時針轉
-   (direction == 'clockwise') ?
+   (direction === 'clockwise') ?
       dataTransform.push(dataTransform.shift()) :
       dataTransform.unshift(dataTransform.pop())
 

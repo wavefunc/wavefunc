@@ -1,3 +1,13 @@
+@mixin pad {
+   @media (max-width: 768px) {
+      @content;
+   }
+}
+@mixin mobile {
+   @media (max-width: 375px) {
+      @content;
+   }
+}
 // Summary 摘要
 .summary {
    position: absolute;
@@ -8,6 +18,18 @@
    top: 32vh;
    left: 39vw;
    z-index: 20;
+
+   @media (max-width: 600px) {
+      top: 15vh;
+      left: 5vw;
+      width: 90vw;
+   }
+
+   @media (max-width: 375px) {
+      top: 5vh;
+      left: 5vw;
+      width: 90vw;
+   }
 
    ~ .summary {
       display: none;

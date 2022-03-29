@@ -13,6 +13,7 @@ function Footer() {
             <Image src={`${process.env.PUBLIC_URL}/assets/webtech/javascript.svg`} />
             <Image src={`${process.env.PUBLIC_URL}/assets/webtech/react.png`} />
             <Image src={`${process.env.PUBLIC_URL}/assets/webtech/gsap.png`} />
+            <Image src={`${process.env.PUBLIC_URL}/assets/webtech/sass.png`} />
          </div>
          <div>
             <span>我的連繫方式</span>
