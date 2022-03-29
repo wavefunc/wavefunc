@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import gsap from "gsap";
 import './scss/index.scss';
-import './scss/summary.scss';
 import './scss/detail.scss';
+import './scss/summary.scss';
+import './scss/footer.scss';
 import { Container } from 'react-bootstrap';
 
 import { dataElement, dataTransform, dataRndBlock } from './data';

@@ -43,6 +43,9 @@ html {
    width: 200px;
    top: 76.4vh;
    left: 31vw;
+   @include mobile {
+      width: 150px;
+   }
    img {
       width: 100%;
    }
@@ -54,6 +57,9 @@ html {
    width: 216px;
    top: 76.4vh;
    left: 31vw;
+   @include mobile {
+      width: 162px;
+   }
    img {
       width: 100%;
    }
@@ -65,63 +71,4 @@ html {
    height: 20px;
    top: 75.8vh;
    left: 30.5vw;
-}
-
-// Footer 首頁底下的使用技術、聯繫資訊
-#footer {
-   position: absolute;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #c0c1c3;
-   margin: 0px 5vw;
-   top: 92vh;
-   width: 90vw;
-   height: 50px;
-   box-shadow: 5px 5px #d2d2d2 inset, -5px -5px #6d6d6d inset;
-   @media (max-width: 600px) {
-      background-color: transparent;
-      box-shadow: 0 0;
-      justify-content: center;
-   }
-   @media (max-height: 650px) {
-      left: calc(50vw - 10px);
-      top: calc(100vh - 95px);
-      width: 45vw;
-      height: 90px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-   }
-
-   & > div {
-      text-align: center;
-      font-size: 25px;
-      margin: 0 2rem;
-      span {
-         @media (max-width: 1000px) {
-            display: none;
-         }
-      }
-   }
-
-   & div:first-child {
-      img {
-         height: 30px;
-         margin-left: 1.5vw;
-      }
-      @media (max-width: 600px) {
-         display: none;
-      }
-   }
-
-   & div:last-child {
-      a {
-         height: 30px;
-         margin-left: 1vw;
-      }
-      @media (max-width: 600px) {
-         font-size: 40px;
-      }
-   }
 }
