@@ -19,7 +19,7 @@
    left: 39vw;
    z-index: 20;
 
-   @media (max-width: 600px) {
+   @media (max-width: 600px), (max-height: 650px) {
       top: 15vh;
       left: 5vw;
       width: 90vw;

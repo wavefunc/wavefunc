@@ -11,7 +11,7 @@ function Detail({ seq = 0, detail = {}, dataElement = "" }) {
       <div className='detail'>
          <div className="detailNav">
             <h1>{titleSwitch(seq)}</h1>
-            <img src={dataElement} />
+            <img src={process.env.PUBLIC_URL + dataElement} />
             <CloseButton className="closeButton btn-lg" aria-label="Close" onClick={closeHandler} />
          </div>
          <div className="detailContent">
